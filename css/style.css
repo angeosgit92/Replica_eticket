@@ -20,11 +20,12 @@ body {
     display: flex;
     justify-content: center;  
     background-color: #003366; /* Color de fondo azul oscuro */
+    padding: 4px;
 }
 
 /*Configuración de container general*/
 .container {
-    width: 1180px;
+    width: 1200px;
     display:flex;
     justify-content: space-between; 
     align-items: center;
@@ -84,6 +85,7 @@ input:hover{
     margin-left: 5px;
     margin-right: 30px;
     font-size: medium;
+    transition:  0.2s, color 0.2s;
 }
 
 /*Centrar el container de los dos botones de inicio y registrarse*/
@@ -103,6 +105,7 @@ input:hover{
     cursor: pointer;
     margin-right: 5px;
     font-size: medium;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /*Ajuste de boton Registrar*/
@@ -116,6 +119,7 @@ input:hover{
     cursor: pointer;
     margin-right: 10px;
     font-size: medium;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /*hoover de boton Registrar*/
@@ -132,28 +136,65 @@ input:hover{
 
 /*segunda sesion de header*/
 nav {
+    display: flex;
     background-color: var(--secondary-blue);
+    justify-content: center;
 }
 
 /*---------cuadrar------------------*/
-a {
+.second-header{
+    background-color: var(--secondary-blue); 
+    padding: 6px;
+}
+
+.container-second{
+    display:flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para la primera sección del menú */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(8, auto); /* 8 columnas para cada elemento */
+    gap: 0px;
+}
+
+.grid-menu div a {
+    color: #ffffff;
     text-decoration: none;
-    color: #fff;
-    font-size: smaller;
+    padding: 7px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* Hover en la primera sección */
+.grid-menu div a:hover {
+    background-color: #ffffff; /* Fondo blanco al hacer hover */
+    color: #0a2d5e; /* Texto en azul oscuro */
+}
+
+/* Estilo para la segunda sección (Puntos de venta y Ayuda) */
+.grid-menu2 {
+    display: flex;
+    gap: 0px;
+}
+
+.grid-menu2 div a {
+    color: white; /* Texto en azul oscuro */
+    background-color: var(--main-blue);
+    text-decoration: none;
+    padding: 7px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 15px;
     font-weight: bold;
 }
 
-a:hover {
-    color: var(--secondary-blue);
-    background-color: white;
-}
-
-.second-header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;             
-    justify-content: space-around;   
-    align-items: center;
-    font-weight: 100;
-    padding: 6px;
+/* Hover en la segunda sección */
+.grid-menu2 div a:hover {
+    background-color: #ffffff; /* Fondo azul oscuro al hacer hover */
+    color: #0a2d5e; /* Texto en blanco */
 }
