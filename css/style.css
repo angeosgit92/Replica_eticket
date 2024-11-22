@@ -3,104 +3,94 @@
     --secondary-blue: #002a4a;
 }
 
-* {
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #e9e9e9;
 }
 
 /*all of page*/
 body {
     font-family: "Open Sans", Verdana, Arial, Helvetica, sans-serif;
-    background-color: #ecebeb;
 }
 
 /*Primer nav*/
-.navbar {
-    display: flex;
-    justify-content: center;  
-    background-color: #003366; /* Color de fondo azul oscuro */
+.nav {
+    background-color: var(--main-blue);
+    /* Color de fondo azul oscuro */
     padding: 4px;
 }
 
-/*Configuración de container general*/
-.container {
-    width: 1200px;
-    display:flex;
-    justify-content: space-between; 
-    align-items: center;
-}
 
 /*Primer container*/
-.container .first {
-    background-color: #003366;
-    padding: 7px 0px 6px 0px;
+.container {
+    background-color: var(--main-blue);
 }
 
 /*Configuracion de la posicion de logo*/
 .logo {
-    display: flex;
-    align-items: center;
-    width: 275px;    
+    width: 275px;
+    background-color: var(--main-blue)
 }
 
 /* Ajusta el tamaño del logo según sea necesario */
 .logo-img {
-    height: 50px; 
-    margin-right: 10px;
+    height: 50px;
 }
 
-/*centrar verticalmente el cuadro de texto*/
 .search-bar {
-    display: flex;
-    align-items: center;
+    background-color: var(--main-blue);
 }
 
 /*configruacion de cuadro de texto*/
 .search-bar input {
     text-align: left;
-    padding: 11px 11px 8px 8px;
-    border: 1px solid #125cb7;
+    padding: 6px;
+    border: 2px solid #125cb7;
     background-color: #fff;
     border-radius: 4px;
-    outline: none;
+    outline: invert;
     text-align: left;
     font-size: small;
 }
 
 /*hoover de cuadro de texto*/
-input:hover{
+input:hover {
     border-color: #feca4e;
+
 }
 
 /*Configuracion de boton Buscar*/
 .search-bar .btn-primary {
-    background-color: #125cb7; /* Color azul para el botón */
+    background-color: #125cb7;
+    /* Color azul para el botón */
     color: white;
     font-weight: bold;
     border: none;
-    padding: 9px 12px;
+    padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
     margin-left: 5px;
-    margin-right: 30px;
     font-size: medium;
-    transition:  0.2s, color 0.2s;
+    transition: 0.2s, color 0.2s;
 }
 
 /*Centrar el container de los dos botones de inicio y registrarse*/
 .auth-buttons {
     display: flex;
     align-items: center;
+    background-color: var(--main-blue);
 }
 
 /*Ajuste de boton Iniciar Sesion*/
 .auth-buttons .btn-primary {
-    background-color: #125cb7; /* Color azul para el botón */
+    background-color: #125cb7;
+    /* Color azul para el botón */
     color: white;
     font-weight: bold;
     border: none;
-    padding: 10px;
+    padding: 6px;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 5px;
@@ -114,10 +104,9 @@ input:hover{
     color: white;
     font-weight: bold;
     border: none;
-    padding: 10px;
+    padding: 6px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
     font-size: medium;
     transition: background-color 0.2s, color 0.2s;
 }
@@ -138,33 +127,43 @@ input:hover{
 nav {
     display: flex;
     background-color: var(--secondary-blue);
-    justify-content: center;
+    justify-content: center
 }
 
 /*---------cuadrar------------------*/
-.second-header{
-    background-color: var(--secondary-blue); 
+.second-header {
+    background-color: var(--secondary-blue);
     padding: 6px;
 }
 
-.container-second{
-    display:flex;
-    width: 1200px;
+.container-second {
+    display: flex;
+    width: 1195px;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--secondary-blue);
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1195px;
 }
 
 /* Estilo para la primera sección del menú */
 .grid-menu {
     display: grid;
-    grid-template-columns: repeat(8, auto); /* 8 columnas para cada elemento */
+    grid-template-columns: repeat(8, auto);
+    /* 8 columnas para cada elemento */
     gap: 0px;
 }
 
 .grid-menu div a {
     color: #ffffff;
     text-decoration: none;
-    padding: 7px 15px;
+    padding: 8px 18px;
+    background-color: var(--secondary-blue);
     transition: background-color 0.3s, color 0.3s;
     font-size: 15px;
     font-weight: bolder;
@@ -173,8 +172,10 @@ nav {
 
 /* Hover en la primera sección */
 .grid-menu div a:hover {
-    background-color: #ffffff; /* Fondo blanco al hacer hover */
-    color: #0a2d5e; /* Texto en azul oscuro */
+    background-color: #ffffff;
+    /* Fondo blanco al hacer hover */
+    color: #0a2d5e;
+    /* Texto en azul oscuro */
 }
 
 /* Estilo para la segunda sección (Puntos de venta y Ayuda) */
@@ -184,10 +185,11 @@ nav {
 }
 
 .grid-menu2 div a {
-    color: white; /* Texto en azul oscuro */
+    color: white;
+    /* Texto en azul oscuro */
     background-color: var(--main-blue);
     text-decoration: none;
-    padding: 7px 20px;
+    padding: 8px 32px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 15px;
     font-weight: bold;
@@ -195,6 +197,104 @@ nav {
 
 /* Hover en la segunda sección */
 .grid-menu2 div a:hover {
-    background-color: #ffffff; /* Fondo azul oscuro al hacer hover */
-    color: #0a2d5e; /* Texto en blanco */
+    background-color: #ffffff;
+    /* Fondo azul oscuro al hacer hover */
+    color: #0a2d5e;
+    /* Texto en blanco */
+}
+
+.banner {
+    background-color: var(--secondary-blue);
+    padding-bottom: 20px;
+}
+
+
+.navbar {
+    background-color: var(--main-blue);
+    margin-top: 3px;
+}
+
+.navbar .btn-primar {
+    background-color: var(--main-blue);
+    border: none;
+    font-size: 16px;
+    font-weight: medium;
+    color: white;
+    text-transform: none;
+    padding: 22px 20px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* Espaciado entre elementos del botón */
+}
+
+.navbar .btn-primar i {
+    font-size: 20px;
+    /* Tamaño del ícono */
+}
+
+.navbar .btn-primar:hover {
+    background-color: var(--main-blue);
+}
+
+.navbar .btn-primar:focus {
+    background-color: #fff;
+    color: var(--main-blue);
+}
+
+.dropdown-menu {
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 0;
+    /* Sin padding extra */
+    min-width: 220px;
+    /* Ancho mínimo */
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #002b5c;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #002b5c;
+}
+
+.shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-custom {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    justify-content: center;
+    gap: 25px;
+    height: 67.97px;
+}
+
+.dropdown-custom:focus {
+    background-color: #fff;
+    color: #003366;
+    height: 67.97px;
+}
+
+.dropdown-custom:focus>div>.dropdown-custom-svg {
+    stroke: #003366;
+    /* Cambia el color del trazo */
+    fill: #003366;
+    /* Opcional: asegúrate de que el relleno no interfiera */
+}
+
+.dropdown {
+    height: 67.97px;
+}
+
+.dropdown-custom-svg {
+    height: 20px;
 }
